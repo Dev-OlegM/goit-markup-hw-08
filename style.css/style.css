@@ -129,9 +129,9 @@ html {
   transition: color var(--transition-time) var(--transition-function);
 }
 
-.login-menu__link:hover {
-  color: var(--for-price);
-}
+/* .login-menu__link:hover {
+  color: var(--main-color);
+} */
 
 .contact-info__number::before {
   position: absolute;
@@ -194,10 +194,23 @@ header .logo-site {
   transition: color var(--transition-time) var(--transition-function);
 }
 
+.header-nav__link,
+.logo-site__link {
+  padding-right: 10px;
+  padding-left: 10px;
+  color: #0f0101;
+  text-decoration: none;
+}
 
-.login-menu__link:hover,
+.header-nav__link:hover,
 .login-menu__link:focus {
   color: var(--main-color);
+}
+
+.login-menu__link:hover,
+.logo-site__link:hover,
+.login-menu__link:focus {
+  color: var(--for-price);
 }
 
 .product {
@@ -866,7 +879,7 @@ header .logo-site {
   padding-top: 0;
 }
 
-.container_news {
+.news .container {
   position: relative;
   padding-top: 104px;
 }
@@ -971,7 +984,7 @@ header .logo-site {
     url(../img/newslatter-background/background-nwslatter2.jpg);
 }
 
-.section-newslatter .newslatter {
+.newslatter {
   margin: 0;
   padding: 0;
   position: relative;
@@ -980,7 +993,7 @@ header .logo-site {
   text-align: center;
 }
 
-.newslatter .section-title {
+.newslatter__tittle {
   margin: 0;
   padding: 0;
   color: var(--for-product);
@@ -990,7 +1003,7 @@ header .logo-site {
   text-transform: uppercase;
 }
 
-.newslatter .section-title:after {
+.newslatter__tittle:after {
   content: '';
   display: inline-block;
   background-image: url(../img/lines/newslatter-whiteline.png);
@@ -1024,7 +1037,7 @@ header .logo-site {
   cursor: pointer;
 }
 
-.newslatter .follow {
+.newslatter__follow {
   margin: 0;
   padding: 0;
   margin-top: 72px;
@@ -1035,7 +1048,7 @@ header .logo-site {
   line-height: 26px;
 }
 
-.newslatter .input-area {
+.newslatter__input-area {
   display: inline-block;
   width: 540px;
   height: 59px;
