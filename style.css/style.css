@@ -129,10 +129,6 @@ html {
   transition: color var(--transition-time) var(--transition-function);
 }
 
-/* .login-menu__link:hover {
-  color: var(--main-color);
-} */
-
 .contact-info__number::before {
   position: absolute;
   content: '';
@@ -160,7 +156,7 @@ html {
   display: flex;
 }
 
-header .logo-site {
+.logo-site {
   margin: 0;
   padding-top: 35px;
   color: var(--grey-color);
@@ -172,7 +168,7 @@ header .logo-site {
   padding-left: 0px;
 }
 
-.site-header .logo-site:first-letter {
+.logo-site:first-letter {
   color: var(--main-color);
   font-family: var(--main-font);
   font-weight: 400;
@@ -242,7 +238,7 @@ header .logo-site {
 
 /* banner */
 
-.banner .banner-content {
+.banner-content {
   background-image: linear-gradient(
       to bottom right,
       rgba(0, 0, 0, 0.5),
@@ -258,7 +254,7 @@ header .logo-site {
   background-size: cover;
 }
 
-.banner .container {
+.container {
   text-align: center;
 }
 
@@ -280,13 +276,13 @@ header .logo-site {
   margin-bottom: 44px;
 }
 
-.banner .and {
+.banner-content__and {
   color: var(--main-color);
   font-family: var(--main-font);
   font-weight: 700;
 }
 
-.banner .sale {
+.banner-content__sale {
   color: var(--main-color);
   font-family: var(--second-font);
   font-weight: 600;
@@ -317,7 +313,7 @@ header .logo-site {
   background-color: var(--for-links);
 }
 
-.about .about-items {
+.about-items {
   margin: 0;
   padding: 0;
   display: flex;
@@ -641,10 +637,10 @@ header .logo-site {
   background-color: var(--for-price);
 }
 
-.new-collection .about-items {
+/* .new-collection .about-items {
   margin: 0;
   padding: 0;
-}
+} */
 
 /* product */
 
@@ -653,7 +649,7 @@ header .logo-site {
   padding-top: 104px;
 }
 
-.product .section-title::after {
+.section-title::after {
   position: absolute;
   content: '';
   display: inline-block;
@@ -709,8 +705,8 @@ header .logo-site {
   transition: background-color var(--transition-time) var(--transition-function);
 }
 
-.gallery .button-like:hover,
-.gallery .button-like:focus {
+.button-like:hover,
+.button-like:focus {
   background-color: var(--main-color);
   cursor: pointer;
 }
@@ -729,13 +725,13 @@ header .logo-site {
   transition: background-color var(--transition-time) var(--transition-function);
 }
 
-.gallery .button-review:hover,
-.gallery .button-review:focus {
+.button-review:hover,
+.button-review:focus {
   background-color: var(--main-color);
   cursor: pointer;
 }
 
-.gallery .button-clock {
+.button-clock {
   margin: 0;
   padding: 0;
   background-color: transparent;
@@ -748,8 +744,8 @@ header .logo-site {
   transition: background-color var(--transition-time) var(--transition-function);
 }
 
-.gallery .button-clock:hover,
-.gallery .button-clock:focus {
+.button-clock:hover,
+.button-clock:focus {
   background-color: var(--main-color);
   cursor: pointer;
 }
@@ -799,10 +795,6 @@ header .logo-site {
   position: relative;
   overflow: hidden;
 }
-
-/* .gallery-img {
-  width: 200px;
-} */
 
 .gallery-list__overlay::before {
   display: inline-block;
@@ -857,10 +849,6 @@ header .logo-site {
   transition: background-color var(--transition-time) var(--transition-function);
 }
 
-/* .gallery-img {
-  width: 255px;
-  position: none;
-} */
 
 .gallery-list__link:hover .gallery-list__descr {
   background-color: var(--main-color);
@@ -916,6 +904,7 @@ header .logo-site {
   padding-top: 14px;
   margin: 0;
   margin-bottom: 43px;
+  text-align: justify;
 }
 
 .news-item__descr {
@@ -926,18 +915,9 @@ header .logo-site {
   line-height: 26px;
   margin: 0;
   margin-bottom: 16px;
+  text-align: justify;
 }
 
-/* .read-more {
-  width: 159px;
-  height: 51px;
-  background-color: var(--for-readmore);
-  font-family: var(--second-font);
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 26px;
-  cursor: pointer;
-} */
 
 .news-item__link {
   text-decoration: none;
@@ -957,9 +937,6 @@ header .logo-site {
   color: var(--main-color);
 }
 
-/* .item-for-header {
-  padding-top: 105px;
-} */
 
 .news-item__link {
   display: flex;
@@ -1015,7 +992,7 @@ header .logo-site {
   top: 166px;
 }
 
-.section-newslatter .newslatter-button {
+.newslatter-button {
   position: absolute;
   content: '';
   display: inline-block;
@@ -1032,7 +1009,7 @@ header .logo-site {
   transition: background-color var(--transition-time) var(--transition-function);
 }
 
-.section-newslatter .newslatter-button:hover {
+.newslatter-button:hover {
   background-color: var(--main-color);
   cursor: pointer;
 }
