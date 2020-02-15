@@ -342,56 +342,34 @@ html {
   margin-right: 34px;
 }
 
-.about-items__setting::before {
-  content: '';
+.about-items__card {
+  width: 66px;
+  height: 66px;
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+}
+
+.about-items__card--setting {
   background-image: url(../img/icons/setting.png);
-  width: 66px;
-  height: 66px;
-  background-repeat: no-repeat;
-  color: var(--main-color);
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -100%);
 }
 
-.about-items__money-back::before {
-  content: '';
+.about-items__card--money-back {
   background-image: url(../img/icons/power.png);
-  width: 66px;
-  height: 66px;
-  background-repeat: no-repeat;
-  color: var(--main-color);
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -100%);
 }
 
-.about-items__worldwide-shipping::before {
-  content: '';
+.about-items__card--worldwide-shipping {
   background-image: url(../img/icons/world.png);
   width: 66px;
   height: 66px;
   background-repeat: no-repeat;
-  color: var(--main-color);
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -100%);
 }
 
-.about-items__worldwide-second::before {
-  content: '';
+.about-items__card--worldwide-second {
   background-image: url(../img/icons/compass.png);
   width: 66px;
   height: 66px;
   background-repeat: no-repeat;
-  color: var(--main-color);
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -100%);
 }
 
 .about-items__header {
@@ -404,12 +382,13 @@ html {
   line-height: 32px;
   text-transform: uppercase;
   margin-bottom: 30px;
+  padding-top: 63px;
 }
 
 .about-items__descr {
   margin: 0;
   padding: 0;
-  text-align: justify;
+  text-align: center;
   color: var(--grey-color);
   font-family: var(--second-font);
   font-size: 14px;
@@ -542,7 +521,6 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
-
   transition: opacity 250ms;
   transition-delay: 250ms;
 }
@@ -551,18 +529,50 @@ html {
   opacity: 1;
 }
 
-.button-like {
+.item__btn {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  transition: background-color var(--transition-time) var(--transition-function);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+  margin-right: 4px;
+}
+
+.item__btnadd {
   margin: 0;
   padding: 0;
   background-color: transparent;
-  background-image: url(../img/icons/new-collection/like.png);
-  width: 50px;
+  width: 166px;
   height: 50px;
   border: 1px solid #ffffff;
   background-repeat: no-repeat;
   background-position: center;
-  margin-right: 4px;
+  margin-top: 7px;
   transition: background-color var(--transition-time) var(--transition-function);
+}
+
+.item__btn:nth-child(3) {
+  margin-right: 0;
+}
+
+.button-like {
+  background-image: url(../img/icons/new-collection/like.png);
+}
+
+.button-review {
+  background-image: url(../img/icons/new-collection/review.png);
+}
+
+.button-clock {
+  background-image: url(../img/icons/new-collection/clock.png);
+}
+
+.button-addcard {
+  background-image: url(../img/icons/new-collection/add-card.png);
 }
 
 .button-like:hover,
@@ -571,57 +581,16 @@ html {
   cursor: pointer;
 }
 
-.button-review {
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  background-image: url(../img/icons/new-collection/review.png);
-  width: 50px;
-  height: 50px;
-  border: 1px solid #ffffff;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 4px;
-  transition: background-color var(--transition-time) var(--transition-function);
-}
-
 .button-review:hover,
 .button-review:focus {
   background-color: var(--main-color);
   cursor: pointer;
 }
 
-.button-clock {
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  background-image: url(../img/icons/new-collection/clock.png);
-  width: 50px;
-  height: 50px;
-  border: 1px solid #ffffff;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: background-color var(--transition-time) var(--transition-function);
-}
-
 .button-clock:hover,
 .button-clock:focus {
   background-color: var(--main-color);
   cursor: pointer;
-}
-
-.button-addcard {
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  background-image: url(../img/icons/new-collection/add-card.png);
-  width: 166px;
-  height: 50px;
-  border: 1px solid #ffffff;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-top: 7px;
-  transition: background-color var(--transition-time) var(--transition-function);
 }
 
 .button-addcard:hover,
@@ -636,11 +605,6 @@ html {
 .item__link:hover .item__price {
   background-color: var(--for-price);
 }
-
-/* .new-collection .about-items {
-  margin: 0;
-  padding: 0;
-} */
 
 /* product */
 
@@ -673,12 +637,12 @@ html {
 }
 
 .gallery-list__action {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
   position: absolute;
-  display: flex;
-  flex-wrap: wrap;
-  width: 168px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -691,38 +655,10 @@ html {
   opacity: 1;
 }
 
-.gallery .button-like {
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  background-image: url(../img/icons/new-collection/like.png);
-  width: 50px;
-  height: 50px;
-  border: 1px solid #ffffff;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 8px;
-  transition: background-color var(--transition-time) var(--transition-function);
-}
-
 .button-like:hover,
 .button-like:focus {
   background-color: var(--main-color);
   cursor: pointer;
-}
-
-.gallery .button-review {
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  background-image: url(../img/icons/new-collection/review.png);
-  width: 50px;
-  height: 50px;
-  border: 1px solid #ffffff;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 8px;
-  transition: background-color var(--transition-time) var(--transition-function);
 }
 
 .button-review:hover,
@@ -731,37 +667,10 @@ html {
   cursor: pointer;
 }
 
-.button-clock {
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  background-image: url(../img/icons/new-collection/clock.png);
-  width: 50px;
-  height: 50px;
-  border: 1px solid #ffffff;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: background-color var(--transition-time) var(--transition-function);
-}
-
 .button-clock:hover,
 .button-clock:focus {
   background-color: var(--main-color);
   cursor: pointer;
-}
-
-.button-addcard {
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  background-image: url(../img/icons/new-collection/add-card.png);
-  width: 166px;
-  height: 50px;
-  border: 1px solid #ffffff;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-top: 7px;
-  transition: background-color var(--transition-time) var(--transition-function);
 }
 
 .button-addcard:hover,
@@ -849,7 +758,6 @@ html {
   transition: background-color var(--transition-time) var(--transition-function);
 }
 
-
 .gallery-list__link:hover .gallery-list__descr {
   background-color: var(--main-color);
 }
@@ -918,7 +826,6 @@ html {
   text-align: justify;
 }
 
-
 .news-item__link {
   text-decoration: none;
   color: var(--for-links);
@@ -936,7 +843,6 @@ html {
 .news-item__link:hover {
   color: var(--main-color);
 }
-
 
 .news-item__link {
   display: flex;
