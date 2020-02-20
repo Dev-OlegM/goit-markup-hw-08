@@ -555,42 +555,42 @@ html {
   margin-right: 0;
 }
 
-.button-like {
+.item__btn--button-like {
   background-image: url(../img/icons/new-collection/like.png);
 }
 
-.button-review {
+.item__btn--button-review {
   background-image: url(../img/icons/new-collection/review.png);
 }
 
-.button-clock {
+.item__btn--button-clock {
   background-image: url(../img/icons/new-collection/clock.png);
 }
 
-.button-addcard {
+.item__btn--button-addcard {
   background-image: url(../img/icons/new-collection/add-card.png);
 }
 
-.button-like:hover,
-.button-like:focus {
+.item__btn--button-like:hover,
+.item__btn--button-like:focus {
   background-color: var(--main-color);
   cursor: pointer;
 }
 
-.button-review:hover,
-.button-review:focus {
+.item__btn--button-review:hover,
+.item__btn--button-review:focus {
   background-color: var(--main-color);
   cursor: pointer;
 }
 
-.button-clock:hover,
-.button-clock:focus {
+.item__btn--button-clock:hover,
+.item__btn--button-clock:focus {
   background-color: var(--main-color);
   cursor: pointer;
 }
 
-.button-addcard:hover,
-.button-addcard:focus {
+.item__btn--button-addcard:hover,
+.item__btn--button-addcard:focus {
   background-color: #323232;
   cursor: pointer;
 }
@@ -622,7 +622,7 @@ html {
   top: 160px;
 }
 
-.gallery {
+.gallery-list {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -651,31 +651,31 @@ html {
   opacity: 1;
 }
 
-.button-like:hover,
-.button-like:focus {
+.item__btn--button-like:hover,
+.item__btn--button-like:focus {
   background-color: var(--main-color);
   cursor: pointer;
 }
 
-.button-review:hover,
-.button-review:focus {
+.item__btn--button-review:hover,
+.item__btn--button-review:focus {
   background-color: var(--main-color);
   cursor: pointer;
 }
 
-.button-clock:hover,
-.button-clock:focus {
+.item__btn--button-clock:hover,
+.item__btn--button-clock:focus {
   background-color: var(--main-color);
   cursor: pointer;
 }
 
-.button-addcard:hover,
-.button-addcard:focus {
+.item__btn--button-addcard:hover,
+.item__btn--button-addcard:focus {
   background-color: #323232;
   cursor: pointer;
 }
 
-.gallery-list {
+.gallery-list__item {
   display: flex;
   width: 255px;
 
@@ -683,11 +683,11 @@ html {
   margin-bottom: 30px;
 }
 
-.gallery-list:nth-child(4n) {
+.gallery-list__item:nth-child(4n) {
   margin-right: 0px;
 }
 
-.gallery-list:nth-last-child(-n + 4) {
+.gallery-list__item:nth-last-child(-n + 4) {
   margin-bottom: 0px;
 }
 
