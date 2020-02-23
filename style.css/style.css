@@ -308,7 +308,7 @@ html {
   background-color: var(--for-links);
 }
 
-.about-items {
+.about-list {
   margin: 0;
   padding: 0;
   display: flex;
@@ -327,44 +327,41 @@ html {
   position: relative;
 }
 
-.about-items__list {
+.about-list__item {
   list-style: none;
   position: relative;
   margin: 0;
   padding: 0;
-  position: relative;
   width: 249px;
   margin-right: 34px;
 }
 
-.about-items__card {
+.about-list__item::before {
+  content: '';
   width: 66px;
   height: 66px;
-  margin-left: auto;
-  margin-right: auto;
   background-repeat: no-repeat;
+  color: var(--main-color);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -60%);
 }
 
-.about-items__card--setting {
+.about-list__item--setting::before {
   background-image: url(../img/icons/setting.png);
 }
 
-.about-items__card--money-back {
+.about-list__item--money-back::before {
   background-image: url(../img/icons/power.png);
 }
 
-.about-items__card--worldwide-shipping {
+.about-list__item--worldwide-shipping::before {
   background-image: url(../img/icons/world.png);
-  width: 66px;
-  height: 66px;
-  background-repeat: no-repeat;
 }
 
-.about-items__card--worldwide-second {
+.about-list__item--worldwide-second::before {
   background-image: url(../img/icons/compass.png);
-  width: 66px;
-  height: 66px;
-  background-repeat: no-repeat;
 }
 
 .about-items__header {
